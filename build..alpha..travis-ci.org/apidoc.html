@@ -1,0 +1,402 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://babeljs.io/"
+
+    >babel-preset-stage-3 (v6.24.1)</a>
+</h1>
+<h4>Babel preset for stage 3 plugins</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-stage-3">module babel-preset-stage-3</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-preset-stage-3.</span>plugins</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-preset-stage-3.plugins">module babel-preset-stage-3.plugins</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-stage-3.plugins.0">
+            function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>0
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-stage-3.plugins.1">
+            function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>1
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-stage-3.plugins.2">
+            function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>2
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-stage-3.plugins.3">
+            function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>3
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-preset-stage-3.plugins.4">
+            function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>4
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-stage-3" id="apidoc.module.babel-preset-stage-3">module babel-preset-stage-3</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-preset-stage-3.plugins" id="apidoc.module.babel-preset-stage-3.plugins">module babel-preset-stage-3.plugins</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-stage-3.plugins.0" id="apidoc.element.babel-preset-stage-3.plugins.0">
+        function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>0
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">0 = function () {
+  return {
+    manipulateOptions: function manipulateOptions(opts, parserOpts) {
+      parserOpts.plugins.push(&#x22;trailingFunctionCommas&#x22;);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-stage-3.plugins.1" id="apidoc.element.babel-preset-stage-3.plugins.1">
+        function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>1
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">1 = function () {
+  return {
+    inherits: require(&#x22;babel-plugin-syntax-async-functions&#x22;),
+
+    visitor: {
+      Function: function Function(path, state) {
+        if (!path.node.async || path.node.generator) return;
+
+        (0, _babelHelperRemapAsyncToGenerator2.default)(path, state.file, {
+          wrapAsync: state.addHelper(&#x22;asyncToGenerator&#x22;)
+        });
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-stage-3.plugins.2" id="apidoc.element.babel-preset-stage-3.plugins.2">
+        function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>2
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">2 = function (_ref) {
+  var t = _ref.types;
+
+  return {
+    inherits: require(&#x22;babel-plugin-syntax-exponentiation-operator&#x22;),
+
+    visitor: (0, _babelHelperBuilderBinaryAssignmentOperatorVisitor2.default)({
+      operator: &#x22;**&#x22;,
+
+      build: function build(left, right) {
+        return t.callExpression(t.memberExpression(t.identifier(&#x22;Math&#x22;), t.identifier(&#x22;pow&#x22;)), [left, right]);
+      }
+    })
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-stage-3.plugins.3" id="apidoc.element.babel-preset-stage-3.plugins.3">
+        function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>3
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">3 = function (_ref) {
+  var t = _ref.types;
+
+  var yieldStarVisitor = {
+    Function: function Function(path) {
+      path.skip();
+    },
+    YieldExpression: function YieldExpression(_ref2, state) {
+      var node = _ref2.node;
+
+      if (!node.delegate) return;
+      var callee = state.addHelper(&#x22;asyncGeneratorDelegate&#x22;);
+      node.argument = t.callExpression(callee, [t.callExpression(state.addHelper(&#x22;asyncIterator&#x22;), [node.argument]), t.memberExpression
+(state.addHelper(&#x22;asyncGenerator&#x22;), t.identifier(&#x22;await&#x22;))]);
+    }
+  };
+
+  return {
+    inherits: require(&#x22;babel-plugin-syntax-async-generators&#x22;),
+    visitor: {
+      Function: function Function(path, state) {
+        if (!path.node.async || !path.node.generator) return;
+
+        path.traverse(yieldStarVisitor, state);
+
+        (0, _babelHelperRemapAsyncToGenerator2.default)(path, state.file, {
+          wrapAsync: t.memberExpression(state.addHelper(&#x22;asyncGenerator&#x22;), t.identifier(&#x22;wrap&#x22;)),
+          wrapAwait: t.memberExpression(state.addHelper(&#x22;asyncGenerator&#x22;), t.identifier(&#x22;await&#x22;))
+        });
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-preset-stage-3.plugins.4" id="apidoc.element.babel-preset-stage-3.plugins.4">
+        function <span class="apidocSignatureSpan">babel-preset-stage-3.plugins.</span>4
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">4 = function (_ref) {
+  var t = _ref.types;
+
+  function hasRestProperty(path) {
+    var foundRestProperty = false;
+    path.traverse({
+      RestProperty: function RestProperty() {
+        foundRestProperty = true;
+        path.stop();
+      }
+    });
+    return foundRestProperty;
+  }
+
+  function hasSpread(node) {
+    for (var _iterator = node.properties, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : (0, _getIterator3
+.default)(_iterator);;) {
+      var _ref2;
+
+      if (_isArray) {
+        if (_i &#x3e;= _iterator.length) break;
+        _ref2 = _iterator[_i++];
+      } else {
+        _i = _iterator.next();
+        if (_i.done) break;
+        _ref2 = _i.value;
+      }
+
+      var prop = _ref2;
+
+      if (t.isSpreadProperty(prop)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function createObjectSpread(file, props, objRef) {
+    var restProperty = props.pop();
+
+    var keys = [];
+    for (var _iterator2 = props, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : (0, _getIterator3
+.default)(_iterator2);;) {
+      var _ref3;
+
+      if (_isArray2) {
+        if (_i2 &#x3e;= _iterator2.length) break;
+        _ref3 = _iterator2[_i2++];
+      } else {
+        _i2 = _iterator2.next();
+        if (_i2.done) break;
+        _ref3 = _i2.value;
+      }
+
+      var prop = _ref3;
+
+      var key = prop.key;
+      if (t.isIdentifier(key) &#x26;&#x26; !prop.computed) {
+        key = t.stringLiteral(prop.key.name);
+      }
+      keys.push(key);
+    }
+
+    return [restProperty.argument, t.callExpression(file.addHelper(&#x22;objectWithoutProperties&#x22;), [objRef, t.arrayExpression(keys)])];
+  }
+
+  function replaceRestProperty(parentPath, paramPath, i, numParams) {
+    if (paramPath.isAssignmentPattern()) {
+      replaceRestProperty(parentPath, paramPath.get(&#x22;left&#x22;), i, numParams);
+      return;
+    }
+
+    if (paramPath.isObjectPattern() &#x26;&#x26; hasRestProperty(paramPath)) {
+      var uid = parentPath.scope.generateUidIdentifier(&#x22;ref&#x22;);
+
+      var declar = t.variableDeclaration(&#x22;let&#x22;, [t.variableDeclarator(paramPath.node, uid)]);
+      declar._blockHoist = i ? numParams - i : 1;
+
+      parentPath.ensureBlock();
+      parentPath.get(&#x22;body&#x22;).unshiftContainer(&#x22;body&#x22;, declar);
+      paramPath.replaceWith(uid);
+    }
+  }
+
+  return {
+    inherits: require(&#x22;babel-plugin-syntax-object-rest-spread&#x22;),
+
+    visitor: {
+      Function: function Function(path) {
+        var params = path.get(&#x22;params&#x22;);
+        for (var i = 0; i &#x3c; params.length; i++) {
+          replaceRestProperty(params[i].parentPath, params[i], i, params.length);
+        }
+      },
+      VariableDeclarator: function VariableDeclarator(path, file) {
+        if (!path.get(&#x22;id&#x22;).isObjectPattern()) {
+          return;
+        }
+
+        var insertionPath = path;
+
+        path.get(&#x22;id&#x22;).traverse({
+          RestProperty: function RestProperty(path) {
+            if (this.originalPath.node.id.properties.length &#x3e; 1 &#x26;&#x26; !t.isIdentifier(this.originalPath.node.init)) {
+              var initRef = path.scope.generateUidIdentifierBasedOnNode(this.originalPath.node.init, &#x22;ref&#x22;);
+
+              this.originalPath.insertBefore(t.variableDeclarator(initRef, this.originalPath.node.init));
+
+              this.originalPath.replaceWith(t.variableDeclarator(this.originalPath.node.id, initRef));
+
+              return;
+            }
+
+            var ref = this.originalPath.node.init;
+
+            path.findParent(function (path) {
+              if (path.isObjectProperty()) {
+                ref = t.memberExpression(ref, t.identifier(path.node.key.name));
+              } else if (path.isVariableDeclarator()) {
+                return true;
+              }
+            });
+
+            var _createObjectSpread = createObjectSpread(file, path.parentPath.node.properties, ref),
+                argument = _createObjectSpread[0],
+                callExpression = _createObjectSpread[1];
+
+            insertionPath.insertAfter(t.variableDeclarator(argument, callExpression));
+
+            insertionPath = insertionPath.getSibling(insertionPath.key + 1);
+
+            if (path.parentP ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
